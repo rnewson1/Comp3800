@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Spotify Song Popularity Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f4; }
+        h1 { color: #333; }
+        form { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        input[type="text"] { width: calc(100% - 22px); padding: 10px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #4CAF50; color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer; width: 100%; }
+        button:hover { background-color: #45a049; }
+        h2 { color: #333; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Spotify Song Popularity Prediction</h1>
+    <form method="post">
+        <input type='text' name="streams" placeholder="Streams (e.g., 141381703)" required="required" />
+        <input type='text' name="in_spotify_playlists" placeholder="In Spotify Playlists (e.g., 553)" required="required" />
+        <input type='text' name="in_apple_playlists" placeholder="In Apple Playlists (e.g., 43)" required="required" />
+        <input type='text' name="in_deezer_playlists" placeholder="In Deezer Playlists (e.g., 13)" required="required" />
+        <input type='text' name="bpm" placeholder="BPM (e.g., 125)" required="required" />
+        <input type='text' name="danceability_%" placeholder="Danceability % (e.g., 80)" required="required" />
+        <input type='text' name="valence_%" placeholder="Valence % (e.g., 89)" required="required" />
+        <input type='text' name="energy_%" placeholder="Energy % (e.g., 83)" required="required" />
+        <input type='text' name="acousticness_%" placeholder="Acousticness % (e.g., 31)" required="required" />
+        <input type='text' name="instrumentalness_%" placeholder="Instrumentalness % (e.g., 0)" required="required" />
+        <input type='text' name="liveness_%" placeholder="Liveness % (e.g., 8)" required="required" />
+        <input type='text' name="speechiness_%" placeholder="Speechiness % (e.g., 4)" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Popularity</button>
+    </form>
+
+    <h2>The song is: {{predicted_text}}</h2>
+</body>
+</html>
